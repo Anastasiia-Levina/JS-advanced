@@ -4,10 +4,8 @@ function bind(fn, context, ...args) {
   }
 }
 
-
-// Something wrong with this func
 Function.prototype.bind2 = function (context, ...args) {
-  fn = this;
+  let fn = this;
   return function (...params) {
     return fn.apply(context, args.concat(params));
   }
